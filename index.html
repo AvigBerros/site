@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title>Virtual Folio - Portfolio HTML5 Template</title>
+
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/vendor/owl-carousel/owl.carousel.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/vendor/nice-select/css/nice-select.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/vendor/fancybox/css/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/virtual.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/topbar.virtual.css">
+</head>
+<style>
+  .hidden {
+    display: none;
+  }
+  .vg-page.page-contact {
+    background-color: #f3f4f6;
+    padding: 60px 0;
+  }
+  .badge-subhead {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  h1.fw-normal {
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: #343a40;
+  }
+  .btn-theme {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .btn-theme:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .wow {
+    visibility: hidden;
+  }
+
+  @media (min-width: 1300px) {
+    #home {
+      width: 100%; margin-top: 0%;   /* Ajustez la taille si nécessaire pour écrans larges */
+    }
+
+  }
+  @media (min-width: 1000px) {
+    .vg-page, .page-home
+    {
+      width: 100% !important;
+
+    }
+
+
+  }
+  @media screen and (max-width: 800px) {
+    .badge {
+      white-space: normal;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .img-place {
+      margin-bottom: 50px; /* Réduire l'écart entre l'image et le texte */
+    }
+    .titre
+    {
+      font-size: 30px !important;
+    }
+  }
+</style>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+  
+  <!-- Setting button -->
+<!--  <div class="config">-->
+<!--    <div class="template-config">-->
+<!--      &lt;!&ndash; Settings &ndash;&gt;-->
+<!--      <div class="d-block">-->
+<!--        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; Puschase &ndash;&gt;-->
+<!--      <div class="d-block">-->
+<!--        <a href="https://macodeid.com/projects/virtual-folio/" class="btn btn-fab btn-sm" title="Get this template" data-toggle="tooltip" data-placement="left"><span class="ti-download"></span></a>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; Help &ndash;&gt;-->
+<!--      <div class="d-block">-->
+<!--        <a href="#" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left"><span class="ti-help"></span></a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="set-menu">-->
+<!--      <p>Select Color</p>-->
+<!--      <div class="color-bar" data-toggle="selected">-->
+<!--        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>-->
+<!--        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>-->
+<!--        <span class="color-item bg-theme-green" data-class="theme-green"></span>-->
+<!--        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>-->
+<!--        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>-->
+<!--      </div>-->
+<!--      <select class="custom-select d-block my-2" id="change-page">-->
+<!--        <option value="">Choose Page</option>-->
+<!--        <option value="index">Topbar</option>-->
+<!--        <option value="blog-topbar">Blog (Topbar)</option>-->
+<!--        <option value="index-2">Minibar</option>-->
+<!--        <option value="blog-minibar">Blog (Minibar)</option>-->
+<!--      </select>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+<!--  <div class="vg-page page-home" id="home" style="background-image: url(../assets/img/AB.png)">-->
+<!--    <div class="caption-header text-center wow zoomInDown">-->
+<!--      <h5 class="fw-normal" style="font-size: 40px; font-weight: bold;">BIENVENUE</h5>-->
+<!--      <h1 class="fw-light mb-13" style="font-size: 75px; font-weight: bold;"><b class="fg-theme">Avigaël Berros</b></h1>-->
+
+<!--      <div class="badge" style="font-size: 22px; font-weight: bold;">Chanteuse, compositrice, musicienne et intérprête</div>-->
+<!--    </div> &lt;!&ndash; End Caption header &ndash;&gt;-->
+<!--    <div class="floating-button"><span class="ti-mouse"></span></div>-->
+<!--  </div>-->
+
+
+
+
+  <div class="vg-page page-home" id="home" style="background-image: url(assets/img/AB.png); background-size: cover; background-position: center;">
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal" style="font-size: 40px; font-weight: bold;">BIENVENUE</h5>
+      <h1 class="fw-light mb-13" style="font-size: 75px; font-weight: bold;"><b class="fg-theme">Avigaël Berros</b></h1>
+      <div class="badge" style="font-size: 22px; font-weight: bold;">Chanteuse, compositrice, musicienne et interprète</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Navbar -->
+<!--    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">-->
+<!--      <div style="margin-right: 300px;" class="container">-->
+<!--&lt;!&ndash;        <a href="" style="width: 420px;" class="navbar-brand"><img src="../assets/img/AB.png" style="width: 70%; height: 30%; border-radius: 10%; " class="img-top"></a>&ndash;&gt;-->
+<!--        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">-->
+<!--          <span class="ti-menu"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" style="margin-right: 20%;" id="main-navbar">-->
+<!--          <ul class="navbar-nav ml-auto">-->
+<!--            <li class="nav-item active">-->
+<!--              <a href="#home" class="nav-link" data-animate="scrolling">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#about" class="nav-link" data-animate="scrolling">About</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <ul class="nav ml-auto">-->
+<!--            <li class="nav-item">-->
+<!--              <button class="btn btn-fab btn-theme no-shadow">En</button>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div> &lt;!&ndash; End Navbar &ndash;&gt;-->
+    <!-- Caption header -->
+
+  
+  <div class="vg-page page-about" id="about">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="img-place wow fadeInUp">
+            <img src="assets/img/IMG_6224.JPG" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+          <h1 class="fw-light" style="font-size: 37px;">Avigaël Berros</h1>
+          <h5 class="fg-theme mb-3" style="font-size: 23px;" >Chanteuse, compositrice, musicienne et interprète</h5>
+          <p class="text-muted" style="font-size: 18px;">Si, toi aussi, comme moi tu partages la passion du chant et de la musique, celle qui éveille nos sens, et qui rend nos rêves accessibles, cette page est pour toi. Aussi loin que je me souvienne, j’ai toujours chanté, avec un amour enflammé pour la flûte traversière. Aujourd’hui je décide de partager avec toi ce don qu’Hashem m’a donné. </p>
+<!--          <button class="btn btn-theme-outline">Download CV</button>-->
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="vg-page page-service">
+      <div class="container">
+        <div class="text-center wow fadeInUp">
+          <div class="badge badge-subhead">Service</div>
+        </div>
+        <h1 class="fw-normal text-center wow fadeInUp titre">Contactez-moi pour tout vos événements :</h1>
+        <div class="row mt-5">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-service wow fadeInUp">
+              <div class="icon">
+                <span><img src="assets/img/petrissage-Photoroom.png-Photoroom.png" style="width: 70%;"></span>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">Afrachat 'Hala / Mikvé</h4>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-service wow fadeInUp">
+              <div class="icon">
+                <span><img src="assets/img/micro.png" style="width: 70%;"></span>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">Rassemblement / Concert</h4>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-service wow fadeInUp">
+              <div class="icon">
+                <span><img src="assets/img/eveil.png" style="width: 70%;"></span>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">Éveil musical / choral pour enfants</h4>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-service wow fadeInUp">
+              <div class="icon">
+
+                <span><img src="assets/img/IMG_1017-Photoroom.png-Photoroom.png" style="width: 70%;"></span>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">Cours de flûte traversière / formation musical</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+  <!-- Portfolio page -->
+  <div class="vg-page page-portfolio" id="portfolio">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Portfolio</div>
+      </div>
+      <h1 class="text-center fw-normal wow fadeInUp titre">Voici mon travail</h1>
+      <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+<!--        <button class="btn btn-theme-outline" data-filter="*">All</button>-->
+        <button class="btn btn-theme-outline selected" data-filter=".apps">Playlist</button>
+        <button class="btn btn-theme-outline" data-filter=".template">Vidéo</button>
+      </div>
+
+      <div class="gridder my-3">
+        <div class="grid-item apps wow zoomIn">
+<!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+<!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+<!--            <div class="img-caption">-->
+<!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/7_OCTOBRE.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/7 OCTOBRE.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">7 octobre 2023</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/1000 ET UNE RAISONS.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/1000 ET UNE RAISONS.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">1000 ET UNE RAISONS</h5>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/ALORS DIS MOI.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/ALORS DIS MOI.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">ALORS DIS MOI</h5>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/DIS ROI DAVID .mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/DIS ROI DAVID .mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">DIS ROI DAVID</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/J’AI RDV AVEC TOI.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/J’AI RDV AVEC TOI.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">J’AI RDV AVEC TOI</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/L’ENVIE D’AVOIR ENVIE .mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/L’ENVIE D’AVOIR ENVIE .mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">L’ENVIE D’AVOIR ENVIE</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/LA SYMPHONIE DE LA VIE.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/LA SYMPHONIE DE LA VIE.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">LA SYMPHONIE DE LA VIE</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/MERCI HACHEM.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/MERCI HACHEM.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">MERCI HACHEM</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/Prière pour nos soldats.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/Prière pour nos soldats.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">Prière pour nos soldats</h5>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/TOI SEUL SAIS.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/TOI SEUL SAIS.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">TOI SEUL SAIS</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/TU VERRAS .mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/TU VERRAS .mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">TU VERRAS</h5>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid-item apps wow zoomIn">
+          <!--          <div class="img-place" data-src="../assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">-->
+          <!--            <img src="../assets/img/work/work-1.jpg" alt="">-->
+          <!--            <div class="img-caption">-->
+          <!--              <audio data-src="../assets/img/7 OCTOBRE.mp3">Chanson 1</audio>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="audio-place" data-src="assets/audio/DOUTE.mp3" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
+            <audio controls>
+              <source src="assets/audio/DOUTE.mp3" type="audio/mpeg">
+              Votre navigateur ne supporte pas la balise audio.
+            </audio>
+            <div class="audio-caption">
+              <h5 class="fg-theme">DOUTE</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1D8jXWb7bjJXV6JfG0ddiowx6zQBf6k5m/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">L'envie d'avoir envie</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1QyxnSHvIALMtEu4zxonf2DyJNyADC__y/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Tu verras</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/13GriDW2yRn_9ns7acffU3JPFLyFwxaj4/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Merci Hashem</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1PJQqGev6aWXcjOnxb0o9lihYf4sYFKa7/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Toi seul sait</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1iSWE9GsC5kNX1JyG05LaTAu9cJ6o5CEY/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">La symphonie de la vie</h5>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1HXxuTqrYwmUqL9Nj2D2gKH3ZJq1W6GY5/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">7 Octobre</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1rQp5tPtD3OVouEbTdKCJ4VihHcm450gA/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Alors, Dis moi</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/1cAXy0tdnyawnv9NQUtWMMnPpn3tqY40Q/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Dis, Roi David</h5>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item template wireframes wow zoomIn">
+          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="">
+            <iframe src="https://drive.google.com/file/d/175T8Pyur9tD1RDMzn3Dzd_BjQAeP5N-y/preview" width="283" height="223" allow="autoplay" allowfullscreen></iframe>
+            <div class="img-caption">
+              <h5 class="fg-theme">Doute</h5>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div> <!-- End gridder -->
+<!--      <div class="text-center wow fadeInUp">-->
+<!--        <a href="javascript:void(0)" class="btn btn-theme">Load More</a>-->
+<!--      </div>-->
+    </div>
+  </div> <!-- End Portfolio page -->
+  
+  <!-- Testimonial -->
+<!--  <div class="vg-page page-testimonial">-->
+<!--    <div class="container">-->
+<!--      <h1 class="text-center fw-normal wow fadeInUp">What Clients are Saying</h1>-->
+<!--      <div class="row justify-content-center mt-5 wow fadeInUp">-->
+<!--        <div class="col-md-9">-->
+<!--          <div class="owl-carousel testi-carousel">-->
+<!--            <div class="item">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="img-place">-->
+<!--                    <img src="../assets/img/testimonials/testimonials_1.jpg" alt="">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="caption">-->
+<!--                    <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered</div>-->
+<!--                    <div class="testi-info">-->
+<!--                      <div class="thumb-profile">-->
+<!--                        <img src="../assets/img/testimonials/testimonials_1.jpg" alt="">-->
+<!--                      </div>-->
+<!--                      <div class="tagline">-->
+<!--                        <h5 class="mb-0">Satria Nugraha</h5>-->
+<!--                        <span class="text-muted">CEO Nutshell</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="img-place">-->
+<!--                    <img src="../assets/img/testimonials/testimonials_2.jpg" alt="">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="caption">-->
+<!--                    <div class="testi-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe natus expedita ab facilis ut, animi explicabo amet. Voluptatibus possimus iste enim, doloremque, fugiat accusamus nisi optio fugit ratione expedita harum?</div>-->
+<!--                    <div class="testi-info">-->
+<!--                      <div class="thumb-profile">-->
+<!--                        <img src="../assets/img/testimonials/testimonials_2.jpg" alt="">-->
+<!--                      </div>-->
+<!--                      <div class="tagline">-->
+<!--                        <h5 class="mb-0">Selena Arrini</h5>-->
+<!--                        <span class="text-muted">CEO BigTree</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div> &lt;!&ndash; End testimonial &ndash;&gt;-->
+<!--    &lt;!&ndash; End client &ndash;&gt;-->
+<!--  -->
+  <!-- Blog -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <div class="vg-page page-blog" id="blog">-->
+<!--    <div class="container">-->
+<!--      <div class="text-center">-->
+<!--        <div class="badge badge-subhead wow fadeInUp">Évenement</div>-->
+<!--      </div>-->
+<!--      <h1 class="text-center fw-normal wow fadeInUp">Mes prochains évenments</h1>-->
+<!--      <div class="row post-grid">-->
+<!--        <div class="col-md-6 col-lg-4 wow fadeInUp">-->
+<!--          <div class="card">-->
+<!--            <div class="img-place">-->
+<!--              <img src="../assets/img/work/work-9.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="caption">-->
+<!--              <a href="javascript:void(0)" class="post-category">Technology</a>-->
+<!--              <a href="#" class="post-title">Invision design forward fund</a>-->
+<!--              <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6 col-lg-4 wow fadeInUp">-->
+<!--          <div class="card">-->
+<!--            <div class="img-place">-->
+<!--              <img src="../assets/img/work/work-6.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="caption">-->
+<!--              <a href="javascript:void(0)" class="post-category">Business</a>-->
+<!--              <a href="#" class="post-title">Announcing a plan for small teams</a>-->
+<!--              <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6 col-lg-4 wow fadeInUp">-->
+<!--          <div class="card">-->
+<!--            <div class="img-place">-->
+<!--              <img src="../assets/img/work/work-1.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="caption">-->
+<!--              <a href="javascript:void(0)" class="post-category">Design</a>-->
+<!--              <a href="#" class="post-title">5 basic tips for illustrating</a>-->
+<!--              <span class="post-date"><span class="sr-only">Published on</span> May 22, 2018</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div> -->
+    <!-- End blog -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Contact -->
+<!--  <div class="vg-page page-contact" id="contact">-->
+<!--    <div class="container-fluid">-->
+<!--      <div class="text-center wow fadeInUp">-->
+<!--        <div class="badge badge-subhead">Contact</div>-->
+<!--      </div>-->
+<!--      <h1 class="text-center fw-normal wow fadeInUp">Restez en contact</h1>-->
+<!--        <div class="col-lg-5">-->
+
+<!--          <a href="mailto:votreadresse@mail.fr" class="btn">  <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Par Mail</button></a>-->
+<!--        </div>-->
+<!--      <div class="col-lg-5">-->
+
+<!--        <a href="mailto:votreadresse@mail.fr" class="btn">  <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Par téléphone</button></a>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div> &lt;!&ndash; End Contact &ndash;&gt;-->
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    <div class="vg-page page-contact" id="contact">-->
+<!--      <div class="container-fluid">-->
+<!--        <div class="text-center wow fadeInUp">-->
+<!--          <div class="badge badge-subhead">Contact</div>-->
+<!--        </div>-->
+<!--        <h1 class="text-center fw-normal wow fadeInUp">Restez en contact</h1>-->
+<!--        <div class="button-container">-->
+<!--          <div class="col-lg-5">-->
+<!--            <a href="mailto:votreadresse@mail.fr" class="btn">-->
+<!--              <button type="button" class="btn btn-theme mt-3 wow fadeInUp">Par Mail</button>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="col-lg-5">-->
+<!--            <a href="tel:+1234567890" class="btn">-->
+<!--              <button type="button" class="btn btn-theme mt-3 wow fadeInUp">Par téléphone</button>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+
+
+<!--    <div class="vg-page page-contact" id="contact">-->
+<!--      <div class="container-fluid">-->
+<!--        <div class="text-center wow fadeInUp">-->
+<!--          <div class="badge badge-subhead">Contact</div>-->
+<!--        </div>-->
+<!--        <h1 class="text-center fw-normal wow fadeInUp">Restez en contact</h1>-->
+<!--        <div class="row justify-content-center button-container mt-4">-->
+<!--          <div class="col-lg-5 text-center mb-3">-->
+<!--            <a href="mailto:votreadresse@mail.fr" class="btn btn-theme btn-lg mt-3 wow fadeInUp">Par Mail</a>-->
+<!--          </div>-->
+<!--          <div class="col-lg-5 text-center">-->
+<!--            <a href="tel:+1234567890" class="btn btn-theme btn-lg mt-3 wow fadeInUp">Par téléphone</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--    <div class="vg-page page-contact" id="contact">-->
+<!--      <div class="container-fluid py-5">-->
+<!--        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">-->
+<!--          <div class="badge badge-subhead">Contact</div>-->
+<!--        </div>-->
+<!--        <h1 class="text-center fw-normal wow fadeInUp" data-wow-delay="0.2s">Restez en contact</h1>-->
+<!--        <div class="row justify-content-center mt-5">-->
+<!--          <div class="col-lg-4 text-center mb-4 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--            <a href="mailto:votreadresse@mail.fr" class="btn btn-theme btn-lg mt-3">Par Mail</a>-->
+<!--          </div>-->
+<!--          <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.4s">-->
+<!--            <a href="tel:+1234567890" class="btn btn-theme btn-lg mt-3">Par téléphone</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="vg-footer">
+      <div class="container py-5">
+<!--        <h1 class="text-center mb-4">Virtual Folio</h1>-->
+        <div class="row justify-content-center">
+
+
+
+
+
+
+          <div  id="contact">
+            <div class="container-fluid py-5">
+              <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="badge badge-subhead" >Contact</div>
+              </div>
+              <h1 class="text-center fw-normal wow fadeInUp" data-wow-delay="0.2s" style="color: white">Restez en contact</h1>
+              <div class="d-flex flex-column align-items-center mt-5">
+                <div class="p-2 wow fadeInUp" data-wow-delay="0.3s" STYLE="width: 400px;">
+                  <a href="mailto:aviberros@gmail.com" class="btn btn-theme btn-lg mt-3 d-flex align-items-center">
+                    <img src="assets/img/mail.png" style="width: 40px;" alt="Mail Icon" class="icon">
+                    <span class="ms-2"> : aviberros@gmail.com</span>
+                  </a>
+                </div>
+                <div class="p-2 wow fadeInUp" data-wow-delay="0.4s" STYLE="width: 400px;">
+                  <a href="tel:+33762506783" class="btn btn-theme btn-lg mt-3 d-flex align-items-center">
+                    <img src="assets/img/tel.png" style="width: 40px;" alt="Phone Icon" class="icon">
+                    <span class="ms-2"> : +33762506783</span>
+                  </a>
+                </div>
+                <div class="p-2 wow fadeInUp" data-wow-delay="0.4s" style="max-width: 400px;">
+                  <a href="#" class="btn btn-theme btn-lg mt-3 d-flex flex-column align-items-center">
+                    <img src="assets/img/whatsapp.png" style="width: 100%;" alt="WhatsApp Icon" class="icon">
+                    <span class="mt-2">Groupe Whatsapp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-12">
+            <p class="text-center mb-0">Copyright &copy;2024 fait par <a href="mailto:noasillampro@gmail.com">Noa Sillam</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+  <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    
+  <script src="assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    
+  <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    
+  <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+    
+  <script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+  <script src="assets/vendor/wow/wow.min.js"></script>
+
+  <script src="assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="assets/js/google-maps.js"></script>
+    
+  <script src="assets/js/topbar-virtual.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+
+    <script>
+      $(document).ready(function() {
+        // Initialize Isotope
+        var $grid = $('.gridder').isotope({
+          itemSelector: '.grid-item',
+          layoutMode: 'fitRows',
+          filter: '.apps' // Default filter
+        });
+
+        // Filter items on button click
+        $('.filterable-button').on('click', 'button', function() {
+          var filterValue = $(this).attr('data-filter');
+          $grid.isotope({ filter: filterValue });
+          $('.filterable-button button').removeClass('selected');
+          $(this).addClass('selected');
+        });
+      });
+    </script>
+</body>
+</html>
