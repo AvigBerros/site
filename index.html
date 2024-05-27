@@ -282,7 +282,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/MERCI HACHEM.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/MERCI HACHEM.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -300,7 +300,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/TU_VERRAS.mp3">
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/TU_VERRAS.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -318,7 +318,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/L_ENVIE_D_AVOIR_ENVIE.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/L_ENVIE_D_AVOIR_ENVIE.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -337,7 +337,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/1000 ET UNE RAISONS.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/1000 ET UNE RAISONS.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -355,7 +355,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/LA SYMPHONIE DE LA VIE.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/LA SYMPHONIE DE LA VIE.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -376,7 +376,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/Alors_dis_moi.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/Alors_dis_moi.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -395,7 +395,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/J_AI_RDV_AVEC_TOI.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/J_AI_RDV_AVEC_TOI.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -414,7 +414,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/DOUTE.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/DOUTE.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -433,7 +433,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/TOI SEUL SAIS.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/TOI SEUL SAIS.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -458,7 +458,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/DIS_ROI_DAVID.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/DIS_ROI_DAVID.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -497,7 +497,7 @@
 <!--            </div>-->
 <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/7_OCTOBRE.mp3" >
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/7 OCTOBRE.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -527,7 +527,7 @@
           <!--            </div>-->
           <!--          </div>-->
           <div class="audio-place" data-src="assets/audio/Priere-pour-nos-soldats.mp3">
-            <audio  controls onended="playNextAudio(this)">
+            <audio  controls onplay="pauseOtherAudios(this)" onended="playNextAudio(this)">
               <source src="assets/audio/Priere-pour-nos-soldats.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la balise audio.
             </audio>
@@ -1061,6 +1061,14 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
     <script>
+      function pauseOtherAudios(currentAudio) {
+        var allAudios = document.querySelectorAll("audio");
+        allAudios.forEach(audio => {
+          if (audio !== currentAudio) {
+            audio.pause();
+          }
+        });
+      }
       function playNextAudio(currentAudio) {
         var nextAudio = currentAudio.parentElement.parentElement.nextElementSibling;
         if (nextAudio) {
