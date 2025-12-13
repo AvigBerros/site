@@ -100,6 +100,139 @@
       font-size: 30px !important;
     }
   }
+
+
+
+
+
+   /* Carousel events */
+.event-carousel .item { padding: 0 12px; }
+.event-carousel .card { height: 100%; }
+.event-carousel .owl-nav button {
+  background: transparent !important;
+  border: none !important;
+}
+.event-carousel .owl-dots { margin-top: 20px; }
+
+
+  /* === EVENTS CAROUSEL – compatible template === */
+.post-grid .event-carousel {
+  width: 100%;
+}
+
+.post-grid .event-carousel .item {
+  padding: 0 15px; /* équivalent col-lg-4 */
+}
+
+.post-grid .event-carousel .card {
+  margin: 0;
+}
+
+.event-carousel .owl-nav button {
+  background: transparent !important;
+  border: none !important;
+}
+
+.event-carousel .owl-dots {
+  margin-top: 25px;
+}
+
+
+/* =========================
+   EVENTS: même taille d'image
+   ========================= */
+
+/* Hauteur uniforme pour toutes les affiches */
+.post-grid .event-carousel .img-place {
+  height: 350px;        /* <-- change si tu veux plus/moins grand */
+  overflow: hidden;
+}
+
+/* Image toujours bien "dans le cadre" */
+.post-grid .event-carousel .img-place img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+background: #fff;   /* rempli tout (peut couper un peu) */
+  object-position: center;
+  display: block;
+}
+
+/* (optionnel) même hauteur de carte pour aligner les textes */
+.post-grid .event-carousel .card {
+  height: 100%;
+}
+
+
+/* =========================================
+   EVENTS: toutes les cards à la même taille
+   ========================================= */
+
+.post-grid .event-carousel .item {
+  height: 100%;
+}
+
+/* Hauteur unique pour toutes les cartes */
+.post-grid .event-carousel .card {
+  height: 480px;              /* <-- ajuste si tu veux plus grand/petit */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Zone image: taille fixe */
+.post-grid .event-carousel .card .img-place {
+  height: 330px;              /* <-- ajuste (doit rester cohérent avec card height) */
+  overflow: hidden;
+}
+
+/* L'image remplit bien la zone */
+.post-grid .event-carousel .card .img-place img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Zone texte: prend le reste */
+.post-grid .event-carousel .card .caption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Limite le texte pour éviter que la carte grandisse */
+.post-grid .event-carousel .card .caption .post-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;      /* max 2 lignes */
+  overflow: hidden;
+}
+
+/* Limite aussi l'adresse/titre catégorie si besoin */
+.post-grid .event-carousel .card .caption .post-category {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;      /* max 1 ligne */
+  overflow: hidden;
+}
+
+/* Limite le bloc texte pour homogénéiser */
+.post-grid .event-carousel .card .caption .post-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* et si tu veux aussi limiter l'adresse/city */
+.post-grid .event-carousel .card .caption a.post-title{
+  -webkit-line-clamp: 2;
+}
+
+
 </style>
 <body class="theme-red">
   
@@ -808,171 +941,152 @@
 
 
 
+<div class="vg-page page-blog" id="blog">
+  <div class="container">
 
-    <div class="vg-page page-blog" id="blog">
-      <div class="container">
+    <h1 class="text-center fw-normal wow fadeInUp">Prochain évènement</h1>
 
-        <h1 class="text-center fw-normal wow fadeInUp">Prochain évènement</h1>
-        <div class="row post-grid">
+    <!-- ROW + POST-GRID OBLIGATOIRE POUR LE STYLE -->
+    <div class="row post-grid">
+
+      <!-- OWL CAROUSEL -->
+      <div class="owl-carousel event-carousel wow fadeInUp">
 
 
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/hanouka-2.JPG" style="height: 350px;"  alt="">
-              </div>
 
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Soirée de lancement LINK UP</a>
-                <a href="#" class="post-title">Grande Synagogue de Sarcelles, 74 avenue Paul Valery, SARCELLES 95200</a>
-                <span class="post-date"><span class="sr-only">le</span>Dimanche 22 décembre 2024 à 20H30</span>
-              </div>
+         <!-- ITEM 1 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/hannoucca-2025.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Soirée de Hanoucca</a>
+              <a href="#" class="post-title">Beth Yaakov, 9 Chem. de Saint-Pol, 73100 Aix-les-Bains</a>
+              <span class="post-date">Dimanche 21 décembre 2025 à 19H30</span>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/hanouka.JPG" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Hanouka à Villiers-Le-Bel</a>
-                <a href="#" class="post-title">4 rue de chanzy, VILLIERS-LE-BEL 95400</a>
-                <span class="post-date"><span class="sr-only">le</span>Dimanche 22 décembre 2024 à 14H</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/rosh-hodesh.JPG" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">Programme Speciale en L'Honneur de Rosh Hodesh KISLEV</a>
-                <a href="#" class="post-title">Grande Synagogue de Sarcelles, 74 avenue Paul Valery, SARCELLES 95200</a>
-                <span class="post-date"><span class="sr-only">le</span>Lundi 2 décembre 2024 à 10H30</span>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/rahel-3.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">HILLOULA DE RAHEL IMÉNOU</a>
-                <a href="#" class="post-title">4 BIS, CHEMIN DE LA HAIE BARDE, MONTMAGNY 95360</a>
-                <span class="post-date"><span class="sr-only">le</span>Samedi 16 novembre 2024 à 20H</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/rahel-1.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">HILLOULA DE RAHEL IMÉNOU</a>
-                <a href="#" class="post-title">35 RUE SAINT-DIDIER, PARIS 16</a>
-                <span class="post-date"><span class="sr-only">le</span>Mardi 12 novembre 2024</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/rahel-2.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">HILLOULA DE RAHEL IMÉNOU</a>
-                <a href="#" class="post-title">10 PLACE DE JÉRUSALEM, PARIS 17</a>
-                <span class="post-date"><span class="sr-only">le</span>Lundi 11 novembre 2024</span>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/concert-avig.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">SING FOR THEM</a>
-                <a href="#" class="post-title">Salon Hoche</a>
-                <span class="post-date"><span class="sr-only">le</span>Dimanche 20 octobre 2024</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/silhot.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">SELI'HOT MUSICALES</a>
-                <a href="#" class="post-title">3 BD ALBERT CAMUS, 95200 SARCELLES</a>
-                <span class="post-date"><span class="sr-only">le</span>Mardi 8 octobre 2024</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/7-octobre.jpeg" style="height: 350px;"  alt="">
-              </div>
-
-              <div class="caption">
-                <a href="javascript:void(0)" class="post-category">BETH-EL NACHIM</a>
-                <a href="#" class="post-title">67 Rue Pierre Curie, 93230 Romainville</a>
-                <span class="post-date"><span class="sr-only">le</span>Lundi 7 octobre 2024</span>
-              </div>
-            </div>
-          </div>
-
-
         </div>
-      </div>
-    </div>
 
 
+        <!-- ITEM 1 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/hanouka-2.JPG" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Soirée de lancement LINK UP</a>
+              <a href="#" class="post-title">Grande Synagogue de Sarcelles, 74 avenue Paul Valery, SARCELLES 95200</a>
+              <span class="post-date">Dimanche 22 décembre 2024 à 20H30</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- ITEM 2 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/hanouka.JPG" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Hanouka à Villiers-Le-Bel</a>
+              <a href="#" class="post-title">4 rue de Chanzy, VILLIERS-LE-BEL 95400</a>
+              <span class="post-date">Dimanche 22 décembre 2024 à 14H</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- ITEM 3 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/rosh-hodesh.JPG" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Programme spécial Rosh Hodesh Kislev</a>
+              <a href="#" class="post-title">Grande Synagogue de Sarcelles, 74 avenue Paul Valery</a>
+              <span class="post-date">Lundi 2 décembre 2024 à 10H30</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/rahel-3.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Hilloula de Rahel Iménou</a>
+              <a href="#" class="post-title">4 bis chemin de la Haie Barde, Montmagny</a>
+              <span class="post-date">Samedi 16 novembre 2024 à 20H</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/rahel-1.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Hilloula de Rahel Iménou</a>
+              <a href="#" class="post-title">35 rue Saint-Didier, Paris 16</a>
+              <span class="post-date">Mardi 12 novembre 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/rahel-2.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Hilloula de Rahel Iménou</a>
+              <a href="#" class="post-title">10 place de Jérusalem, Paris 17</a>
+              <span class="post-date">Lundi 11 novembre 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 7 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/concert-avig.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">SING FOR THEM</a>
+              <a href="#" class="post-title">Salon Hoche</a>
+              <span class="post-date">Dimanche 20 octobre 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 8 -->
+        <div class="item">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/silhot.jpeg" style="height: 350px;" alt="">
+            </div>
+            <div class="caption">
+              <a href="javascript:void(0)" class="post-category">Selihot musicales</a>
+              <a href="#" class="post-title">3 bd Albert Camus, 95200 Sarcelles</a>
+              <span class="post-date">Mardi 8 octobre 2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /owl-carousel -->
+
+    </div><!-- /row post-grid -->
+
+  </div>
+</div>
 
 
 
@@ -1271,6 +1385,24 @@
           $(this).addClass('selected');
         });
       });
+
+
+        $(document).ready(function () {
+    $('.event-carousel').owlCarousel({
+      loop: true,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1200: { items: 3 }
+      }
+    });
+  });
+
     </script>
 </body>
 </html>
