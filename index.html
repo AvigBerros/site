@@ -1387,20 +1387,49 @@ background: #fff;   /* rempli tout (peut couper un peu) */
       });
 
 
-        $(document).ready(function () {
-    $('.event-carousel').owlCarousel({
-      loop: true,
-      nav: true,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: { items: 1 },
-        768: { items: 2 },
-        1200: { items: 3 }
-      }
-    });
+  //  $(document).ready(function () {
+ //   $('.event-carousel').owlCarousel({
+  //    loop: true,
+ //     nav: true,
+ //     dots: true,
+ //     autoplay: true,
+ //     autoplayTimeout: 5000,
+ //     autoplayHoverPause: true,
+ //     responsive: {
+ //       0: { items: 1 },
+ //      768: { items: 2 },
+ //       1200: { items: 3 }
+ //     }
+//    });
+ // });
+
+
+  $(document).ready(function () {
+
+    function initEventCarousel() {
+      const isMobile = window.innerWidth < 768;
+
+      $('.event-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+
+        /* ⏱️ PLUS LENT SUR MOBILE */
+        autoplayTimeout: isMobile ? 8000 : 5000, // 8s mobile / 5s desktop
+
+        autoplayHoverPause: true,
+        smartSpeed: isMobile ? 900 : 600, // transition plus douce sur mobile
+
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1200: { items: 3 }
+        }
+      });
+    }
+
+    initEventCarousel();
   });
 
     </script>
