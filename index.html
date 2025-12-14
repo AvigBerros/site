@@ -233,6 +233,60 @@ background: #fff;   /* rempli tout (peut couper un peu) */
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== ENTÊTE : image plus petite SANS COUPER ===== */
+#home {
+  /* Hauteur plus petite */
+  min-height: 45vh;            /* <-- baisse encore si tu veux (ex: 45vh) */
+
+  /* Image */
+  background-image: url("assets/img/AB.png");
+  background-position: center;
+  background-size: contain;    /* <-- IMPORTANT : ne coupe pas */
+}
+
+/* Sur mobile : encore plus petit */
+@media (max-width: 991px) {
+  #home {
+    min-height: 42vh;
+    background-size: contain;
+  }
+}
+
+/* ===== ENTÊTE : réduire la hauteur ===== */
+#home.vg-page.page-home{
+  height: 45vh !important;     /* <-- mets 40vh / 50vh / 60vh comme tu veux */
+  min-height:45vh !important;
+  padding: 0 !important;
+}
+
+/* Option : sur mobile encore plus petit */
+@media (max-width: 991px){
+  #home.vg-page.page-home{
+    height: 40vh !important;
+    min-height: 40vh !important;
+  }
+}
+
+#home.vg-page.page-home{
+  background-size: contain !important;
+ /*  background-repeat: no-repeat !important;*/
+  background-position: center !important;
+}
+
+
 </style>
 <body class="theme-red">
   
@@ -294,104 +348,32 @@ background: #fff;   /* rempli tout (peut couper un peu) */
 
 
 
-  <div class="vg-page page-home" id="home" style="background-image: url(assets/img/AB.png); background-size: cover; background-position: center;">
-    <div class="caption-header text-center wow zoomInDown">
-      <h5 class="fw-normal" style="font-size: 40px; font-weight: bold;">BIENVENUE</h5>
-      <h1 class="fw-light mb-13" style="font-size: 75px; font-weight: bold;"><b class="fg-theme">Avigaël Berros</b></h1>
-      <div class="badge" style="font-size: 22px; font-weight: bold;">Chanteuse, compositrice, musicienne et interprète</div>
-    </div> <!-- End Caption header -->
-    <div class="floating-button"><span class="ti-mouse"></span></div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Navbar -->
-<!--    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">-->
-<!--      <div style="margin-right: 300px;" class="container">-->
-<!--&lt;!&ndash;        <a href="" style="width: 420px;" class="navbar-brand"><img src="../assets/img/AB.png" style="width: 70%; height: 30%; border-radius: 10%; " class="img-top"></a>&ndash;&gt;-->
-<!--        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">-->
-<!--          <span class="ti-menu"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" style="margin-right: 20%;" id="main-navbar">-->
-<!--          <ul class="navbar-nav ml-auto">-->
-<!--            <li class="nav-item active">-->
-<!--              <a href="#home" class="nav-link" data-animate="scrolling">Home</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--              <a href="#about" class="nav-link" data-animate="scrolling">About</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--              <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--              <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--          <ul class="nav ml-auto">-->
-<!--            <li class="nav-item">-->
-<!--              <button class="btn btn-fab btn-theme no-shadow">En</button>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div> &lt;!&ndash; End Navbar &ndash;&gt;-->
-    <!-- Caption header -->
-
-  
-  <div class="vg-page page-about" id="about">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-4 py-3">
-          <div class="img-place wow fadeInUp">
-            <img src="assets/img/IMG_2595.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-          <h1 class="fw-light" style="font-size: 37px;">Avigaël Berros</h1>
-          <h5 class="fg-theme mb-3" style="font-size: 23px;" >Chanteuse, compositrice, musicienne et interprète</h5>
-          <p class="text-muted" style="font-size: 18px; margin-bottom: 5px;">Si toi aussi, comme moi, tu partages la passion du chant et de la musique, celle qui éveille nos sens et qui rend nos rêves accessibles, cette page est pour toi.</p>
-          <p class="text-muted" style="font-size: 18px; margin-top: 5px;">Aussi loin que je me souvienne, j’ai toujours chanté, avec un amour enflammé pour la flûte traversière. Aujourd’hui, je décide de partager avec toi ce don qu’Hachem m’a donné.</p>
-<!--          <button class="btn btn-theme-outline">Download CV</button>-->
-        </div>
-      </div>
+ 
+ <div class="vg-page page-home" id="home">
+  <div class="caption-header text-center wow zoomInDown">
+    <h5 class="fw-normal" style="font-size: 40px; font-weight: bold;">BIENVENUE</h5>
+    <h1 class="fw-light mb-13" style="font-size: 75px; font-weight: bold;">
+      <b class="fg-theme">Avigaël Berros</b>
+    </h1>
+    <div class="badge" style="font-size: 22px; font-weight: bold;">
+      Chanteuse, compositrice, musicienne et interprète
     </div>
+  </div>
+  <div class="floating-button"><span class="ti-mouse"></span></div>
+</div>
 
 
 
 
-    <div class="vg-page page-about">
-      <div class="container py-4">
+
+
+    <div class="vg-page page-about" style="height: 130px !important;">
+      <div class="container " >
         <div class="row" style="display: flex; justify-content: center;">
           <p style="font-family: cursive; font-size: 25px; width: 80%; text-align: center;">Les textes de ces chansons ont été conçus par vous, spectateurs. Vos conseils, vos retours et vos instants de vie m'inspirent au quotidien.</p>
         </div>
       </div>
     </div>
-
-
-
   
   <!-- Portfolio page -->
   <div class="vg-page page-portfolio" id="portfolio" >
@@ -861,6 +843,76 @@ background: #fff;   /* rempli tout (peut couper un peu) */
 <!--      </div>-->
     </div>
   </div> <!-- End Portfolio page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Navbar -->
+<!--    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">-->
+<!--      <div style="margin-right: 300px;" class="container">-->
+<!--&lt;!&ndash;        <a href="" style="width: 420px;" class="navbar-brand"><img src="../assets/img/AB.png" style="width: 70%; height: 30%; border-radius: 10%; " class="img-top"></a>&ndash;&gt;-->
+<!--        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">-->
+<!--          <span class="ti-menu"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" style="margin-right: 20%;" id="main-navbar">-->
+<!--          <ul class="navbar-nav ml-auto">-->
+<!--            <li class="nav-item active">-->
+<!--              <a href="#home" class="nav-link" data-animate="scrolling">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#about" class="nav-link" data-animate="scrolling">About</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <ul class="nav ml-auto">-->
+<!--            <li class="nav-item">-->
+<!--              <button class="btn btn-fab btn-theme no-shadow">En</button>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div> &lt;!&ndash; End Navbar &ndash;&gt;-->
+    <!-- Caption header -->
+
+  
+  <div class="vg-page page-about" id="about">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="img-place wow fadeInUp">
+            <img src="assets/img/IMG_2595.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+          <h1 class="fw-light" style="font-size: 37px;">Avigaël Berros</h1>
+          <h5 class="fg-theme mb-3" style="font-size: 23px;" >Chanteuse, compositrice, musicienne et interprète</h5>
+          <p class="text-muted" style="font-size: 18px; margin-bottom: 5px;">Si toi aussi, comme moi, tu partages la passion du chant et de la musique, celle qui éveille nos sens et qui rend nos rêves accessibles, cette page est pour toi.</p>
+          <p class="text-muted" style="font-size: 18px; margin-top: 5px;">Aussi loin que je me souvienne, j’ai toujours chanté, avec un amour enflammé pour la flûte traversière. Aujourd’hui, je décide de partager avec toi ce don qu’Hachem m’a donné.</p>
+<!--          <button class="btn btn-theme-outline">Download CV</button>-->
+        </div>
+      </div>
+    </div>
+
+
+
+
   
   <!-- Testimonial -->
 <!--  <div class="vg-page page-testimonial">-->
